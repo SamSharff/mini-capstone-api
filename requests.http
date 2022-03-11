@@ -1,0 +1,10 @@
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "Harry Potter",
+  "price": 35,
+  "image_url": "image_example.com",
+  "description": "Best book series of all time."
+
+}

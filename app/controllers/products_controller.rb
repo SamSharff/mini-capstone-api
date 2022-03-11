@@ -12,15 +12,29 @@ class ProductsController < ApplicationController
 
   def create
     product = Product.new(
-      name: params["name"],
-      price: params["price"],
-      image_url: params["image_url"],
-      description: params["description"]
+    name: params["name"],
+    price: params["price"],
+    image_url: params["image_url"],
+    description: params["description"]
 
     )
     product.save
     render json: product.as_json
   end
+
+  def update
+    product_id = params[:id]
+    products = Product.find_by(id: product_id)
+
+    products.name = params["name"] || products.name
+    products.price = params["price"] || products.price
+    products.image_url = params["image_url"] || products.image_url
+    products.description = params["description"] || products.description
+    
+    products.save
+    render json: products.as_json
+  end
+
 
 
   # def single_product

@@ -1,3 +1,4 @@
+###PRODUCTS CREATE
 POST http://localhost:3000/products
 Content-Type: application/json
 
@@ -6,5 +7,22 @@ Content-Type: application/json
   "price": 35,
   "image_url": "image_example.com",
   "description": "Best book series of all time."
+
+}
+
+###PRODUCTS SHOW
+GET http://localhost:3000/products/:id
+
+###PRODUCTS INDEX
+GET http://localhost:3000/products
+
+###PRODUCTS UPDATE
+PATCH http://localhost:3000/products/3
+Content-Type: application/json
+
+{
+  "name": "Shakespeare's works",
+  "price": 15,
+  "description": "Most beautiful plays ever written."
 
 }

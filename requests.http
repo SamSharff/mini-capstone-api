@@ -26,3 +26,6 @@ Content-Type: application/json
   "description": "Most beautiful plays ever written."
 
 }
+
+###PRODUCTS DESTROY
+GET http://localhost:3000/products/11

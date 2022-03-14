@@ -28,4 +28,4 @@ Content-Type: application/json
 }
 
 ###PRODUCTS DESTROY
-GET http://localhost:3000/products/11
+DELETE http://localhost:3000/products/11

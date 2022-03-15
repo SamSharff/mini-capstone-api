@@ -17,7 +17,7 @@ GET http://localhost:3000/products/4.json
 GET http://localhost:3000/products
 
 ###PRODUCTS UPDATE
-PATCH http://localhost:3000/products/3
+PATCH http://localhost:3000/products/3.json
 Content-Type: application/json
 
 {

@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
 
     )
     product.save
-    @product = products
+    @product = product
     render template: "products/show"
     #render json: product.as_json
   end

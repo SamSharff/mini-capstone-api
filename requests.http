@@ -1,5 +1,5 @@
 ###PRODUCTS CREATE
-POST http://localhost:3000/products
+POST http://localhost:3000/products.json
 Content-Type: application/json
 
 {

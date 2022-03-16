@@ -22,24 +22,27 @@ class ProductsController < ApplicationController
     description: params["description"]
 
     )
-    product.save
-    render template: "products/show"
-    #render json: product.as_json
+    if @product.save
+      render template: "products/show"
+    else
+      render json: {errors: @product.errors.full_messages}, status: 422
+    end
   end
 
   def update
-    product_id = params[:id]
-    products = Product.find_by(id: product_id)
+    @product_id = params[:id]
+    @products = Product.find_by(id: @product_id)
 
-    products.name = params["name"] || products.name
-    products.price = params["price"] || products.price
-    products.image_url = params["image_url"] || products.image_url
-    products.description = params["description"] || products.description
+    @products.name = params["name"] || @products.name
+    @products.price = params["price"] || @products.price
+    @products.image_url = params["image_url"] || @products.image_url
+    @products.description = params["description"] || @products.description
     
-    products.save
-    @product = products
-    render template: "products/show"
-    # render json: products.as_json
+    if @products.save
+      render template: "products/show"
+    else
+      render json: {errors: @products.errors.full_messages}, status: 422
+    end
   end
 
   def destroy

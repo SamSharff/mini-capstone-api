@@ -1,5 +1,6 @@
 class Product < ApplicationRecord
   validates :price, presence: true  
+  validates :name, presence: true  
   validates :name, uniqueness: { case_sensitive: false }
   validates :description, presence: true
   

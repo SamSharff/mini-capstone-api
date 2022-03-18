@@ -4,9 +4,10 @@ class Product < ApplicationRecord
   # validates :name, uniqueness: { case_sensitive: false }
   # validates :description, presence: true
   
-  def supplier
-    Supplier.find_by(id: supplier_id)
-  end
+  belongs_to :supplier
+  # def supplier
+  #   Supplier.find_by(id: supplier_id)
+  # end
 
   def is_discounted?
     if price < 10

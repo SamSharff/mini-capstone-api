@@ -15,6 +15,7 @@ GET http://localhost:3000/products/4.json
 
 ###PRODUCTS INDEX
 GET http://localhost:3000/products.json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDc5NzIwNzZ9.Adb41h-Bs3hvh9kCImYZn2nMeaCFRuoiC8sEoaBfVmQ
 
 ###PRODUCTS UPDATE
 PATCH http://localhost:3000/products/3.json
@@ -40,3 +41,13 @@ Content-Type: application/json
   "password": "thisisapassword!",
   "password_confirmation": "thisisapassword!"
 }
+
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "Aaron@example.com",
+  "password": "thisisapassword!"
+}
+

@@ -4,6 +4,7 @@ class Product < ApplicationRecord
   # validates :name, uniqueness: { case_sensitive: false }
   # validates :description, presence: true
   
+  has_many :orders
   belongs_to :supplier
   # def supplier
   #   Supplier.find_by(id: supplier_id)

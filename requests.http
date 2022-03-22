@@ -67,4 +67,6 @@ Content-Type: application/json
 ###ORDERS SHOW
 GET http://localhost:3000/orders/2
 
+###ORDERS INDEX
+GET http://localhost:3000/orders/
 
